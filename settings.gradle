@@ -1,1 +1,1 @@
-include ':app', ':rxjavaroom', ':viewmodel'
+include ':app', ':rxjavaroom', ':viewmodel_room', ':databinding', ':databinding_twoways'

@@ -9,8 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/databinding" />
+            <option value="$PROJECT_DIR$/databinding_twoways" />
             <option value="$PROJECT_DIR$/rxjavaroom" />
-            <option value="$PROJECT_DIR$/viewmodel" />
+            <option value="$PROJECT_DIR$/viewmodel_room" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

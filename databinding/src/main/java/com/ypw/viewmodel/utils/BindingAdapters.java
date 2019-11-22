@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.widget.ImageViewCompat;
 import androidx.databinding.BindingAdapter;
 import com.ypw.viewmodel.R;
+import kotlin.Suppress;
 
 /**
  * @author : fengzili on
@@ -46,6 +47,7 @@ public class BindingAdapters {
         progress.setProgress((likes * max / 5) > max ? max : (likes * max / 5));
     }
 
+    @Suppress(names = "unused")
     @BindingAdapter("app:popularityIcon")
     public static void popularityIcon(ImageView imageView, Popularity popularity) {
         Drawable drawable = getAssociatedDrawable(popularity, imageView.getContext());
@@ -63,6 +65,7 @@ public class BindingAdapters {
         }
     }
 
+    @Suppress(names = "unused")
     @BindingAdapter("app:hideIfZero")
     public static void hideIfZero(View view, int number) {
         view.setVisibility(number == 0 ? View.GONE : View.VISIBLE);

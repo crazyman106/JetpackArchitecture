@@ -11,3 +11,7 @@
 /build
 /captures
 .externalNativeBuild
+/databinding
+/rxjavaroom
+/viewmodel_room
+/app
