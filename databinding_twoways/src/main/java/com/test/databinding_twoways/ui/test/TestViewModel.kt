@@ -32,4 +32,6 @@ class TestViewModel : ObservableViewModel() {
                 notifyPropertyChanged(BR.progress)
             }
         }
+
+
 }

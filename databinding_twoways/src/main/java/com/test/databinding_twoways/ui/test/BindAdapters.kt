@@ -15,6 +15,7 @@ import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.*
+import com.test.databinding_twoways.R
 
 /**
  *  @author : fengzili on
@@ -107,22 +108,58 @@ object BindAdapters {
             }
         })
     }
+
+
+    @BindingAdapter("numberOfSets_alternative")
+    @JvmStatic
+    fun setNumberOfSets_alternative(view: EditText, value: Array<Int>) {
+        view.setText(
+            String.format(
+                view.resources.getString(
+                    R.string.sets_format,
+                    value[0] + 1,
+                    value[1]
+                )
+            )
+        )
+    }
+
+    @InverseBindingAdapter(attribute = "numberOfSets_alternative")
+    @JvmStatic
+    fun getNumberOfSets_alternative(editText: EditText): Array<Int> {
+        if (editText.text.isEmpty()) {
+            return arrayOf(0, 0)
+        }
+
+        return try {
+            arrayOf(0, editText.text.toString().toInt()) // First item is not passed
+        } catch (e: NumberFormatException) {
+            arrayOf(0, 0)
+        }
+    }
+
 }
 
 /**
+ *
+ * @InverseBindingMethods
  * 函数和对象关联
  */
 object BindMethods {
 
-    @InverseMethod("intToString")
+    @InverseMethod("convertStringToInt")
     @JvmStatic
-    fun stringToInt(value: String): Int {
-        return value.toInt()
+    fun convertIntToString(value: Int): String {
+        return value.toString()
     }
 
     @JvmStatic
-    fun intToString(value: String): String {
-        return value.toString()
+    fun convertStringToInt(value: String): Int {
+        try {
+            return Integer.parseInt(value);
+        } catch (ex: NumberFormatException) {
+            return -1;
+        }
     }
 }
 

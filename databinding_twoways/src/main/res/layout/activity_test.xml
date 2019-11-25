@@ -2,12 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="viewmodel" type="com.example.android.databinding.twowaysample.ui.test.TestViewModel"/>
+        <import type="com.example.android.databinding.twowaysample.ui.test.BindMethods"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:layout_height="match_parent">
+        <!--       numberOfSets="@={viewmodel.value}"-->
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -18,7 +20,7 @@
                 android:background="#33ff0000"
                 android:singleLine="true"
                 android:imeOptions="actionDone"
-                numberOfSets="@={viewmodel.value}"
+                numberOfSets="@={BindMethods.convertIntToString(viewmodel.progress)}"
                 hideKeyboardOnInputDone="@{true}"
                 app:layout_constraintTop_toTopOf="parent"/>
         <TextView
@@ -28,7 +30,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginTop="16dp"
                 android:minHeight="35dp"
-                android:text="@{viewmodel.progress}"
                 android:minWidth="80dp"
                 android:background="#3300ff00"
                 android:layout_height="wrap_content"/>
