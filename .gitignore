@@ -11,7 +11,11 @@
 /build
 /captures
 .externalNativeBuild
-/databinding
-/rxjavaroom
-/viewmodel_room
-/app
+#/databinding
+#/rxjavaroom
+#/viewmodel_room
+#/app
+#/databinding_twoways
+#/lifecycle
+#/livedata
+#/adproject
