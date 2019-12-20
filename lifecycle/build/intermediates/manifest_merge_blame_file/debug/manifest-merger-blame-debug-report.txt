@@ -1,0 +1,208 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  ~ Copyright 2019, The Android Open Source Project
+4  ~
+5  ~ Licensed under the Apache License, Version 2.0 (the "License");
+6  ~ you may not use this file except in compliance with the License.
+7  ~ You may obtain a copy of the License at
+8  ~
+9  ~      http://www.apache.org/licenses/LICENSE-2.0
+10  ~
+11  ~ Unless required by applicable law or agreed to in writing, software
+12  ~ distributed under the License is distributed on an "AS IS" BASIS,
+13  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14  ~ See the License for the specific language governing permissions and
+15  ~ limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.codelabs.lifecycle"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="21"
+23-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="29" />
+24-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml
+25
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:20:5-79
+26-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:20:22-76
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+27-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:21:5-81
+27-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:21:22-78
+28
+29    <uses-feature android:name="android.hardware.location.gps" />
+29-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:23:5-66
+29-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:23:19-63
+30
+31    <application
+31-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:25:5-102:19
+32        android:allowBackup="true"
+32-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:26:13-39
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\f71f8da7ba118f56b7a69563a8255a28\core-1.1.0\AndroidManifest.xml:24:18-86
+34        android:debuggable="true"
+35        android:icon="@mipmap/ic_launcher"
+35-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:27:13-47
+36        android:label="@string/app_name"
+36-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:28:13-45
+37        android:supportsRtl="true"
+37-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:29:13-39
+38        android:theme="@style/AppTheme" >
+38-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:30:13-44
+39        <activity
+39-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:31:9-38:20
+40            android:name="com.example.android.lifecycles.step1.ChronoActivity1"
+40-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:32:17-84
+41            android:label="LC Step1" >
+41-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:33:17-41
+42            <intent-filter>
+42-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:34:13-37:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+43-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:36:17-77
+45-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:36:27-74
+46            </intent-filter>
+47        </activity>
+48        <activity
+48-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:39:9-45:20
+49            android:name="com.example.android.lifecycles.step2.ChronoActivity2"
+49-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:40:17-84
+50            android:label="LC Step2" >
+50-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:41:17-41
+51            <intent-filter>
+51-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+52-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+53            </intent-filter>
+54        </activity>
+55        <activity
+55-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:46:9-52:20
+56            android:name="com.example.android.lifecycles.step3.ChronoActivity3"
+56-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:47:17-84
+57            android:label="LC Step3" >
+57-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:48:17-41
+58            <intent-filter>
+58-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+59-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+60            </intent-filter>
+61        </activity>
+62        <activity
+62-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:53:9-59:20
+63            android:name="com.example.android.lifecycles.step3_solution.ChronoActivity3"
+63-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:54:17-93
+64            android:label="LC Step3 Sol" >
+64-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:55:17-45
+65            <intent-filter>
+65-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+66-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:60:9-66:20
+70            android:name="com.example.android.lifecycles.step4_solution.LocationActivity"
+70-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:61:17-94
+71            android:label="LC Step4" >
+71-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:62:17-41
+72            <intent-filter>
+72-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+73-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+74            </intent-filter>
+75        </activity>
+76        <activity
+76-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:67:9-73:20
+77            android:name="com.example.android.lifecycles.step4.LocationActivity"
+77-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:68:17-85
+78            android:label="LC Step4" >
+78-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:69:17-41
+79            <intent-filter>
+79-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+80                <action android:name="android.intent.action.MAIN" />
+80-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+80-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+81            </intent-filter>
+82        </activity>
+83        <activity
+83-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:74:9-80:20
+84            android:name="com.example.android.lifecycles.step5.Activity_step5"
+84-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:75:17-83
+85            android:label="LC Step5" >
+85-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:76:17-41
+86            <intent-filter>
+86-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+87                <action android:name="android.intent.action.MAIN" />
+87-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+87-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+88            </intent-filter>
+89        </activity>
+90        <activity
+90-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:81:9-87:20
+91            android:name="com.example.android.lifecycles.step5_solution.Activity_step5"
+91-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:82:17-92
+92            android:label="LC Step5 Sol" >
+92-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:83:17-45
+93            <intent-filter>
+93-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+94                <action android:name="android.intent.action.MAIN" />
+94-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+94-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+95            </intent-filter>
+96        </activity>
+97        <activity
+97-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:88:9-94:20
+98            android:name="com.example.android.lifecycles.step6.SavedStateActivity"
+98-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:89:17-87
+99            android:label="LC Step6" >
+99-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:90:17-41
+100            <intent-filter>
+100-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+101                <action android:name="android.intent.action.MAIN" />
+101-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+101-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+102            </intent-filter>
+103        </activity>
+104        <activity
+104-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:95:9-101:20
+105            android:name="com.example.android.lifecycles.step6_solution.SavedStateActivity"
+105-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:96:17-96
+106            android:label="LC Step6 Sol" >
+106-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:97:17-45
+107            <intent-filter>
+107-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:42:13-44:29
+108                <action android:name="android.intent.action.MAIN" />
+108-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:17-69
+108-->E:\JetpackArchitecture\lifecycle\src\main\AndroidManifest.xml:35:25-66
+109            </intent-filter>
+110        </activity>
+111
+112        <service
+112-->[androidx.room:room-runtime:2.2.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8a77110ac4c3d6a1bc928c0c60ecb37c\room-runtime-2.2.1\AndroidManifest.xml:25:9-27:40
+113            android:name="androidx.room.MultiInstanceInvalidationService"
+113-->[androidx.room:room-runtime:2.2.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8a77110ac4c3d6a1bc928c0c60ecb37c\room-runtime-2.2.1\AndroidManifest.xml:26:13-74
+114            android:exported="false" />
+114-->[androidx.room:room-runtime:2.2.1] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\8a77110ac4c3d6a1bc928c0c60ecb37c\room-runtime-2.2.1\AndroidManifest.xml:27:13-37
+115
+116        <provider
+116-->[androidx.lifecycle:lifecycle-process:2.2.0-rc02] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\81ea05e93bc43e6a76e0080a95e17c64\lifecycle-process-2.2.0-rc02\AndroidManifest.xml:25:9-29:43
+117            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+117-->[androidx.lifecycle:lifecycle-process:2.2.0-rc02] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\81ea05e93bc43e6a76e0080a95e17c64\lifecycle-process-2.2.0-rc02\AndroidManifest.xml:26:13-79
+118            android:authorities="com.example.android.codelabs.lifecycle.lifecycle-process"
+118-->[androidx.lifecycle:lifecycle-process:2.2.0-rc02] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\81ea05e93bc43e6a76e0080a95e17c64\lifecycle-process-2.2.0-rc02\AndroidManifest.xml:27:13-69
+119            android:exported="false"
+119-->[androidx.lifecycle:lifecycle-process:2.2.0-rc02] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\81ea05e93bc43e6a76e0080a95e17c64\lifecycle-process-2.2.0-rc02\AndroidManifest.xml:28:13-37
+120            android:multiprocess="true" />
+120-->[androidx.lifecycle:lifecycle-process:2.2.0-rc02] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\81ea05e93bc43e6a76e0080a95e17c64\lifecycle-process-2.2.0-rc02\AndroidManifest.xml:29:13-40
+121    </application>
+122
+123</manifest>

@@ -20,11 +20,11 @@ import com.google.gson.annotations.SerializedName
 data class Repo(
     @PrimaryKey @field:SerializedName("id") val id: Long,
     @field:SerializedName("name") val name: String,
-    @field:SerializedName("fullName") val fullName: String,
+    @field:SerializedName("full_name") val fullName: String,
     @field:SerializedName("description") val description: String?,
-    @field:SerializedName("url") val url: String,
-    @field:SerializedName("stars") val stars: Int,
-    @field:SerializedName("forks") val forks: Int,
+    @field:SerializedName("html_url") val url: String,
+    @field:SerializedName("stargazers_count") val stars: Int,
+    @field:SerializedName("forks_count") val forks: Int,
     @field:SerializedName("language") val language: String?
 )
 
@@ -32,3 +32,13 @@ data class Repo(
  * 搜索数据:搜索结果-网络错误信息
  */
 data class RepoSearchResult(val data: LiveData<List<Repo>>, val networkErrors: LiveData<String>)
+
+
+/**
+ * 数据类来保存来自searchRepo API调用的repo响应。
+ */
+data class RepoSearchResponse(
+    @SerializedName("total_count") val total: Int = 0,
+    @SerializedName("items") val items: List<Repo> = emptyList(),
+    val nextPage: Int? = null
+)
